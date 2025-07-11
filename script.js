@@ -1,37 +1,37 @@
-// function yoni(a, b) {
-//   console.log(a + b);
-// }
-// yoni(10, 20);
-// yoni(5.5, 10);
+function yoni(a, b) {
+  console.log(a + b);
+}
+yoni(10, 20);
+yoni(5.5, 10);
 
-// function array(x) {
-//   console.log(x);
-//   console.log(x[2]);
-// }
-// array([1, 2, 3, 4]);
+function array(x) {
+  console.log(x);
+  console.log(x[2]);
+}
+array([1, 2, 3, 4]);
 
-// function retrn(x, y) {
-//   //   return x + y;
-//   let a = x + y;
-//   return a;
-// }
-// // console.log(retrn(10, 20));
-// var b = retrn(10, 20);
-// console.log(b);
+function retrn(x, y) {
+  //   return x + y;
+  let a = x + y;
+  return a;
+}
+// console.log(retrn(10, 20));
+var b = retrn(10, 20);
+console.log(b);
 
-// // arrow fnction expresion
+// arrow fnction expresion
 
-// let add = () => {
-//   console.log("hello yoni");
-// };
-// add();
+let add = () => {
+  console.log("hello yoni");
+};
+add();
 
-// ALGORITHM PRACTICE
+ALGORITHM PRACTICE
 
-// var sum = function (x, y) {
-//   return x + y;
-// };
-// console.log(sum(5, 7));
+var sum = function (x, y) {
+  return x + y;
+};
+console.log(sum(5, 7));
 
 function areatri(x, y) {
   if (typeof x !== "number" || typeof y !== "number") {
