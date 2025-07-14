@@ -78,4 +78,34 @@ function passfail(score, pass) {
     console.log("failed");
   }
 }
+passfail(70, 50);
+
+// IF ELSE
+
+function passfail(score, pass) {
+  if (score > pass) {
+    console.log("student passed");
+  } else {
+    console.log("failed");
+  }
+}
 passfail(40, 50);
+
+// TERNARY OPERATOR
+function passfail(score, pass) {
+  let result = score > pass ? "passed" : "failed";
+  console.log(result);
+}
+passfail(90, 50);
+
+// IF ELSE IF
+function passfail(s, p) {
+  if (s >= p) {
+    console.log(" passed");
+  } else if (s <= p) {
+    console.log("failed");
+  } else {
+    console.log("incorrect number! try ");
+  }
+}
+passfail("a", 50);
