@@ -109,3 +109,12 @@ function passfail(s, p) {
   }
 }
 passfail("a", 50);
+
+// LOOPS
+
+// FOR LOOPS
+
+var sgrade = [70, 65, 89, 98, 67, 56, 89, 94];
+for (i = 0; i < sgrade.length; i++) {
+  console.log(sgrade[i]);
+}
