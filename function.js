@@ -65,3 +65,17 @@ function scope() {
   }
 }
 scope();
+
+//   conditional statement
+
+//IF
+
+function passfail(score, pass) {
+  if (score > pass) {
+    console.log("student passed");
+  }
+  if (score < pass) {
+    console.log("failed");
+  }
+}
+passfail(40, 50);
