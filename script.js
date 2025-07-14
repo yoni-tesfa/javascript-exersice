@@ -26,7 +26,7 @@ let add = () => {
 };
 add();
 
-ALGORITHM PRACTICE
+// ALGORITHM PRACTICE
 
 var sum = function (x, y) {
   return x + y;

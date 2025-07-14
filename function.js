@@ -48,3 +48,20 @@ function arr(x, y) {
   console.log(x[0]);
 }
 arr([1, 2, 3, 4], [5, 6, 7, 8, 9]);
+
+// scope
+function scope() {
+  var fvar = "i am function var";
+  let flet = " i am functionlet";
+  const fconst = " i am function const";
+  console.log(fvar);
+  console.log(flet);
+  console.log(fconst);
+
+  if (1) {
+    var bvar = "block var";
+    console.log(fvar);
+    console.log(fconst);
+  }
+}
+scope();
