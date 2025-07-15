@@ -118,3 +118,40 @@ var sgrade = [70, 65, 89, 98, 67, 56, 89, 94];
 for (i = 0; i < sgrade.length; i++) {
   console.log(sgrade[i]);
 }
+
+function print(start, end) {
+  for (i = start; i <= end; i++) {
+    console.log(i);
+  }
+}
+print(5, 10);
+
+// FUNCTION ARRAY FILTERING IN FOR LOOP
+
+function arrayfilter(array) {
+  for (i = 0; i < array.length; i++) {
+    if (array[i] > 90) {
+      console.log(array[i] + " A+");
+    }
+  }
+}
+var sgrade = [70, 65, 89, 98, 67, 56, 89, 94];
+arrayfilter(sgrade);
+
+// CONTINUE IN FOR LOOP
+
+for (i = 10; i > 0; i--) {
+  if (i == 7 || i == 4) {
+    continue;
+  }
+  console.log(i);
+}
+
+// BREAK IN FOR LOOP
+
+for (i = 0; i < 10; i++) {
+  if (i == 5) {
+    break;
+  }
+  console.log(i);
+}
