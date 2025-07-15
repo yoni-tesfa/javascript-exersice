@@ -114,44 +114,63 @@ passfail("a", 50);
 
 // FOR LOOPS
 
-var sgrade = [70, 65, 89, 98, 67, 56, 89, 94];
-for (i = 0; i < sgrade.length; i++) {
-  console.log(sgrade[i]);
-}
+// var sgrade = [70, 65, 89, 98, 67, 56, 89, 94];
+// for (i = 0; i < sgrade.length; i++) {
+//   console.log(sgrade[i]);
+// }
 
-function print(start, end) {
-  for (i = start; i <= end; i++) {
-    console.log(i);
-  }
-}
-print(5, 10);
+// function print(start, end) {
+//   for (i = start; i <= end; i++) {
+//     console.log(i);
+//   }
+// }
+// print(5, 10);
 
-// FUNCTION ARRAY FILTERING IN FOR LOOP
+// // FUNCTION ARRAY FILTERING IN FOR LOOP
 
-function arrayfilter(array) {
-  for (i = 0; i < array.length; i++) {
-    if (array[i] > 90) {
-      console.log(array[i] + " A+");
-    }
-  }
-}
-var sgrade = [70, 65, 89, 98, 67, 56, 89, 94];
-arrayfilter(sgrade);
+// function arrayfilter(array) {
+//   for (i = 0; i < array.length; i++) {
+//     if (array[i] > 90) {
+//       console.log(array[i] + " A+");
+//     }
+//   }
+// }
+// var sgrade = [70, 65, 89, 98, 67, 56, 89, 94];
+// arrayfilter(sgrade);
 
-// CONTINUE IN FOR LOOP
+// // CONTINUE IN FOR LOOP
 
-for (i = 10; i > 0; i--) {
-  if (i == 7 || i == 4) {
-    continue;
-  }
-  console.log(i);
-}
+// for (i = 10; i > 0; i--) {
+//   if (i == 7 || i == 4) {
+//     continue;
+//   }
+//   console.log(i);
+// }
 
-// BREAK IN FOR LOOP
+// // BREAK IN FOR LOOP
 
-for (i = 0; i < 10; i++) {
-  if (i == 5) {
+// for (i = 0; i < 10; i++) {
+//   if (i == 5) {
+//     break;
+//   }
+//   console.log(i);
+// }
+
+// while loop
+
+// let i = 1;
+// while (i <= 10) {
+//   console.log(i);
+//   i++;
+// }
+
+let age;
+while (true) {
+  age = prompt("eneter your age");
+  if (!isNaN(age) && age > 0) {
+    console.log("your age is  " + age);
     break;
   }
-  console.log(i);
+  prompt("error!! enter correct age");
+  // console.log("enter correct number");
 }
