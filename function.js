@@ -156,13 +156,13 @@ passfail("a", 50);
 //   console.log(i);
 // }
 
-// while loop
+// WHILE LOOP
 
-// let i = 1;
-// while (i <= 10) {
-//   console.log(i);
-//   i++;
-// }
+let i = 1;
+while (i <= 10) {
+  console.log(i);
+  i++;
+}
 
 let age;
 while (true) {
@@ -172,5 +172,4 @@ while (true) {
     break;
   }
   prompt("error!! enter correct age");
-  // console.log("enter correct number");
 }
