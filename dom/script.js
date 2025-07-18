@@ -55,3 +55,17 @@ var tme = document.getElementById("two");
 console.log(tme);
 let pe = tme.previousElementSibling;
 console.log(pe);
+
+// first elementchild
+
+var tf = document.getElementById("list");
+console.log(tf);
+let fe = tf.firstElementChild;
+console.log(fe);
+
+// last element child
+
+var tl = document.getElementById("list");
+console.log(tl);
+let le = tl.lastElementChild;
+console.log(le);
