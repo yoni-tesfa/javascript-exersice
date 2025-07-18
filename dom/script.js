@@ -40,32 +40,73 @@
 //   el.className = "yellow";
 // }
 
-// TRAVESRING BETWEEN MULTIPLE ELEMENT
+// // TRAVESRING BETWEEN MULTIPLE ELEMENT
 
-// nextelement sibling
+// // nextelement sibling
 
-var tm = document.querySelector(".green");
-console.log(tm);
-var ne = tm.nextElementSibling;
-console.log(ne);
+// var tm = document.querySelector(".green");
+// console.log(tm);
+// var ne = tm.nextElementSibling;
+// console.log(ne);
 
-//  previous element sibling
+// //  previous element sibling
 
-var tme = document.getElementById("two");
-console.log(tme);
-let pe = tme.previousElementSibling;
-console.log(pe);
+// var tme = document.getElementById("two");
+// console.log(tme);
+// let pe = tme.previousElementSibling;
+// console.log(pe);
 
-// first elementchild
+// // first elementchild
 
-var tf = document.getElementById("list");
-console.log(tf);
-let fe = tf.firstElementChild;
-console.log(fe);
+// var tf = document.getElementById("list");
+// console.log(tf);
+// let fe = tf.firstElementChild;
+// console.log(fe);
 
-// last element child
+// // last element child
 
-var tl = document.getElementById("list");
-console.log(tl);
-let le = tl.lastElementChild;
-console.log(le);
+// var tl = document.getElementById("list");
+// console.log(tl);
+// let le = tl.lastElementChild;
+// console.log(le);
+
+// CHANGIN NODE VALUE
+
+// TEXT CONTENT
+
+var textc = document.getElementById("four");
+textc.textContent = "yoni";
+
+// create element
+
+var ce = document.createElement("h1");
+ce.textContent = "java script";
+document.getElementById("list").prepend(ce); //to display on browser at first use prepend()
+// document.body.appendChild(ce); // to display on browser at end use appendchild()
+
+// inner text
+
+var it = document.createElement("p");
+it.innerText = "hi yoni";
+document.body.prepend(it);
+
+// inner html
+
+var ih = document.createElement("p");
+ih.innerHTML = "<B>hi yoni</B>"; // to enter text as html not normal text
+document.body.prepend(ih);
+
+// remove child
+
+var parent = document.getElementById("list");
+let child = document.getElementById("two");
+parent.removeChild(child);
+
+//  after and before
+
+var re = document.getElementById("five"); // referance element
+var ce = document.createElement("h1");
+ce.textContent = "java script";
+ce.className = "red";
+re.after(ce); // to enter element after element by referancing one element
+// re.before(ce); // to enter element before element by referancing one element
