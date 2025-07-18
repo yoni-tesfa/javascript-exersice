@@ -70,43 +70,65 @@
 // let le = tl.lastElementChild;
 // console.log(le);
 
-// CHANGIN NODE VALUE
+// // CHANGIN NODE VALUE
 
-// TEXT CONTENT
+// // TEXT CONTENT
 
-var textc = document.getElementById("four");
-textc.textContent = "yoni";
+// var textc = document.getElementById("four");
+// textc.textContent = "yoni";
 
-// create element
+// // create element
 
-var ce = document.createElement("h1");
-ce.textContent = "java script";
-document.getElementById("list").prepend(ce); //to display on browser at first use prepend()
-// document.body.appendChild(ce); // to display on browser at end use appendchild()
+// var ce = document.createElement("h1");
+// ce.textContent = "java script";
+// document.getElementById("list").prepend(ce); //to display on browser at first use prepend()
+// // document.body.appendChild(ce); // to display on browser at end use appendchild()
 
-// inner text
+// // inner text
 
-var it = document.createElement("p");
-it.innerText = "hi yoni";
-document.body.prepend(it);
+// var it = document.createElement("p");
+// it.innerText = "hi yoni";
+// document.body.prepend(it);
 
-// inner html
+// // inner html
 
-var ih = document.createElement("p");
-ih.innerHTML = "<B>hi yoni</B>"; // to enter text as html not normal text
-document.body.prepend(ih);
+// var ih = document.createElement("p");
+// ih.innerHTML = "<B>hi yoni</B>"; // to enter text as html not normal text
+// document.body.prepend(ih);
 
-// remove child
+// // remove child
 
-var parent = document.getElementById("list");
-let child = document.getElementById("two");
-parent.removeChild(child);
+// var parent = document.getElementById("list");
+// let child = document.getElementById("two");
+// parent.removeChild(child);
 
-//  after and before
+// //  after and before
 
-var re = document.getElementById("five"); // referance element
-var ce = document.createElement("h1");
-ce.textContent = "java script";
-ce.className = "red";
-re.after(ce); // to enter element after element by referancing one element
-// re.before(ce); // to enter element before element by referancing one element
+// var re = document.getElementById("five"); // referance element
+// var ce = document.createElement("h1");
+// ce.textContent = "java script";
+// ce.className = "red";
+// re.after(ce); // to enter element after element by referancing one element
+// // re.before(ce); // to enter element before element by referancing one element
+
+// // WORKING WITH ATTRIBUTE
+// adding ,changing and removing class name
+
+let ac = document.getElementById("one");
+ac.classList.add("black");
+console.log(ac);
+ac.className = "green black"; // changging class name to multiple class (2)
+ac.classList.remove("black"); // removing class name
+
+// changin ID
+
+let ci = document.getElementById("list");
+ci.id = "divlist";
+
+// set attribute
+
+var sa = document.createElement("img"); // create image element
+sa.setAttribute("src", "yo.jpg"); // in img create src attribute and give it value
+sa.setAttribute("width", "50%");
+document.body.appendChild(sa);
+// console.log(sa);
