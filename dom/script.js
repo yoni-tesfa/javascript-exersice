@@ -111,24 +111,30 @@
 // re.after(ce); // to enter element after element by referancing one element
 // // re.before(ce); // to enter element before element by referancing one element
 
-// // WORKING WITH ATTRIBUTE
-// adding ,changing and removing class name
+// //  WORKING WITH ATTRIBUTE
+// // adding ,changing and removing class name
 
-let ac = document.getElementById("one");
-ac.classList.add("black");
-console.log(ac);
-ac.className = "green black"; // changging class name to multiple class (2)
-ac.classList.remove("black"); // removing class name
+// let ac = document.getElementById("one");
+// ac.classList.add("black");
+// console.log(ac);
+// ac.className = "green black"; // changging class name to multiple class (2)
+// ac.classList.remove("black"); // removing class name
 
-// changin ID
+// // changin ID
 
-let ci = document.getElementById("list");
-ci.id = "divlist";
+// let ci = document.getElementById("list");
+// ci.id = "divlist";
 
-// set attribute
+// // set attribute
 
-var sa = document.createElement("img"); // create image element
-sa.setAttribute("src", "yo.jpg"); // in img create src attribute and give it value
-sa.setAttribute("width", "50%");
-document.body.appendChild(sa);
-// console.log(sa);
+// var sa = document.createElement("img"); // create image element
+// sa.setAttribute("src", "yo.jpg"); // in img create src attribute and give it value
+// sa.setAttribute("width", "50%");
+// document.body.appendChild(sa);
+// // console.log(sa);
+
+// style = used to change css part by js
+
+let sty = document.getElementById("dom");
+sty.style.backgroundColor = "blue";
+sty.style.color = "white";
