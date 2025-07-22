@@ -133,8 +133,53 @@
 // document.body.appendChild(sa);
 // // console.log(sa);
 
-// style = used to change css part by js
+// // style = used to change css part by js
 
-let sty = document.getElementById("dom");
-sty.style.backgroundColor = "blue";
-sty.style.color = "white";
+// let sty = document.getElementById("dom");
+// sty.style.backgroundColor = "blue";
+// sty.style.color = "white";
+
+// // EVENT IN JS
+// HTML EVENT HANDLERS
+function yo() {
+  alert("hi yoni");
+}
+
+function changebg() {
+  document.body.style.backgroundColor = "green";
+}
+function removebg() {
+  document.body.style.backgroundColor = "";
+}
+
+// // TRADITIONAL DOM EVENT HANDLERS
+
+document.getElementById("bt-1").onclick = changebg2;
+function changebg2() {
+  document.body.style.backgroundColor = "yellow"; // change color to red when clicked
+}
+
+document.getElementById("bt-1").ondblclick = removebg2;
+function removebg2() {
+  document.body.style.backgroundColor = ""; // remove color when double click
+}
+
+// // DOM LEVEL EVENT LISTENERS
+
+var ev = document.getElementById("bt-3");
+ev.addEventListener("click", changebg3); // there is no on before action like onclick
+function changebg3() {
+  document.body.style.backgroundColor = "red";
+}
+
+ev.addEventListener("dblclick", function removebg3() {
+  document.body.style.backgroundColor = ""; // remove color when double click
+});
+
+// // stop default behavior using preventdefault()
+
+var evan = document.getElementById("evalink");
+evan.addEventListener("click", function (e) {
+  e.preventDefault();
+  evan.textContent = "hello yoni";
+});
