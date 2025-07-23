@@ -139,47 +139,126 @@
 // sty.style.backgroundColor = "blue";
 // sty.style.color = "white";
 
-// // EVENT IN JS
-// HTML EVENT HANDLERS
-function yo() {
-  alert("hi yoni");
-}
+// //  EVENT IN JS
+// // HTML EVENT HANDLERS
+// function yo() {
+//   alert("hi yoni");
+// }
 
-function changebg() {
-  document.body.style.backgroundColor = "green";
-}
-function removebg() {
-  document.body.style.backgroundColor = "";
-}
+// function changebg() {
+//   document.body.style.backgroundColor = "green";
+// }
+// function removebg() {
+//   document.body.style.backgroundColor = "";
+// }
 
-// // TRADITIONAL DOM EVENT HANDLERS
+// //  TRADITIONAL DOM EVENT HANDLERS
 
-document.getElementById("bt-1").onclick = changebg2;
-function changebg2() {
-  document.body.style.backgroundColor = "yellow"; // change color to red when clicked
-}
+// document.getElementById("bt-1").onclick = changebg2;
+// function changebg2() {
+//   document.body.style.backgroundColor = "yellow"; // change color to red when clicked
+// }
 
-document.getElementById("bt-1").ondblclick = removebg2;
-function removebg2() {
-  document.body.style.backgroundColor = ""; // remove color when double click
-}
+// document.getElementById("bt-1").ondblclick = removebg2;
+// function removebg2() {
+//   document.body.style.backgroundColor = ""; // remove color when double click
+// }
 
 // // DOM LEVEL EVENT LISTENERS
 
-var ev = document.getElementById("bt-3");
-ev.addEventListener("click", changebg3); // there is no on before action like onclick
-function changebg3() {
-  document.body.style.backgroundColor = "red";
+// var ev = document.getElementById("bt-3");
+// ev.addEventListener("click", changebg3); // there is no on before action like onclick
+// function changebg3() {
+//   document.body.style.backgroundColor = "red";
+// }
+
+// ev.addEventListener("dblclick", function removebg3() {
+//   document.body.style.backgroundColor = ""; // remove color when double click
+// });
+
+// //  stop default behavior using preventdefault()
+
+// var evan = document.getElementById("evalink");
+// evan.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   evan.textContent = "hello yoni";
+// });
+
+// // // JQUERY
+
+var jq = $("#one"); // using id
+console.log(jq);
+
+var jq1 = $(".green"); // using classname
+console.log(jq1);
+
+// // filtering
+
+var filt1 = $("h1:nth-child(3)");
+console.log(filt1); // console.log(filt1[2]); you can use this in place of nth-child
+
+var filt = $("h1:first");
+console.log(filt);
+
+var filt2 = $("h1:odd"); // their index is odd
+console.log(filt2);
+
+var filt3 = $("h1:even"); // their index is even
+console.log(filt3);
+
+var filt4 = $("h1").first().css("background-color", "blue");
+console.log(filt4);
+
+$("h1:contains(nokia)").css("background-color", "orange");
+
+// // updating
+
+var chang = $("#one");
+chang.text("yoni");
+
+var htm = $("#two");
+htm.html("<h6>jquery</h6>");
+
+// // creating new element
+
+var ce = $("#list");
+ce.prepend("<h1 class='yellow'>added by jquery</h1>");
+
+var bt = $("body");
+bt.append("<button class='red'>jquery<button>");
+
+$("#three").before("<h1 class='red'>added by jquery</h1>");
+
+// // adding attribute,class,css
+
+$("h1").attr("class", "red");
+$("#list").css({
+  "background-color": "blue",
+  color: "white",
+});
+$("div").children().css("background-color", "black");
+
+// // event
+
+$("#bt-3").on("click", changebg);
+
+function changebg() {
+  $("body").css("background", "black");
 }
 
-ev.addEventListener("dblclick", function removebg3() {
-  document.body.style.backgroundColor = ""; // remove color when double click
+// // animation
+
+var el = $("#list");
+$("#bt-3").click(function () {
+  el.animate(
+    {
+      width: "300px",
+    },
+    5000
+  );
 });
-
-// // stop default behavior using preventdefault()
-
-var evan = document.getElementById("evalink");
-evan.addEventListener("click", function (e) {
-  e.preventDefault();
-  evan.textContent = "hello yoni";
+// toggle
+$("#togg").click(function () {
+  //   $("#list").toggle(); // when clicked hide if exist if not when clicked show
+  $("#list").slideToggle();
 });
